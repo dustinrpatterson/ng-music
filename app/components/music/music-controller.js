@@ -1,9 +1,19 @@
-angular.module('ng-music')
-    .controller('CatalogController', function(MusicService){
+(function () {
+    angular.module('ng-music')
+        .component('albums', {
+            templateUrl: 'app/components/music/catalog.html',
+            controller: AlbumsController
+        })
+
+    AlbumsController.$inject = ['MusicService']
+
+    function AlbumsController(MusicService) {
         var cc = this;
-        cc.showDetails = function(album){
+        cc.showDetails = function (album) {
             cc.show = true;
             cc.selectedAlbum = album;
         }
         cc.albums = MusicService.getAllAlbums();
-    })
+    }
+
+} ())

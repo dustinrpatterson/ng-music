@@ -1,23 +1,24 @@
 angular.module('ng-music')
-    .config(function($stateProvider, $sceProvider) {
+    .config(function($stateProvider, $sceProvider, $urlRouterProvider) {
 
         $sceProvider.enabled(false);
 
         $stateProvider
-            .state('home', {
+            .state({
+                name: 'home',
                 url: '',
-                templateUrl: 'app/components/home/home.html'
+                template: 'home'
             })
-            .state('catalog', {
-                url: '/catalog',
-                templateUrl: 'app/components/music/catalog.html',
-                controller: 'CatalogController',
-                controllerAs: 'cc'
+            .state({
+                name: 'albums',
+                url: '/albums',
+                template: '<albums></albums>',
             })
-            .state('details', {
-                url: '/details/:id',
-                templateUrl: 'app/components/music/details.html',
-                controller: 'DetailsController',
-                controllerAs: 'dc'
+            .state({
+                name: 'album',
+                url: '/albums/:id',
+                template: '<album><album>'
             })
+
+            $urlRouterProvider.otherwise('/albums')
     })

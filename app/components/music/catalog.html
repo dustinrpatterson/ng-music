@@ -3,13 +3,13 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4" ng-repeat="album in cc.albums">
+        <div class="col-sm-4" ng-repeat="album in $ctrl.albums">
             <div class="thumbnail">
                 <img ng-src="{{album.artworkUrl100}}" alt="{{album.collectionName}}">
                 <div class="caption">
                     <h3>{{album.collectionName}}</h3>
                     <p>{{album.trackName}}</p>
-                    <p><a ui-sref="details({id: album.trackId})" class="btn btn-primary" role="button">More Dets</a></p>
+                    <p><a ui-sref="album({id: album.trackId})" class="btn btn-primary" role="button">More Dets</a></p>
                 </div>
             </div>
         </div>

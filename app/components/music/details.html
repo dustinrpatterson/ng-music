@@ -1,11 +1,9 @@
 <div class="album-details">
     <div class="jumbotron">
-        <h1>{{dc.selectedAlbum.collectionName}}: {{dc.selectedAlbum.trackName}}</h1>
-        <h3>{{dc.selectedAlbum.artistName}}</h3>
-        
-        
-        <p>{{dc.selectedAlbum.collectionPrice}}: 
-            <audio ng-src="{{dc.trustedUrl}}" type="audio/mp4" controls></audio>
+        <h1>{{$ctrl.selectedAlbum.collectionName}}: {{$ctrl.selectedAlbum.trackName}}</h1>
+        <h3>{{$ctrl.selectedAlbum.artistName}}</h3>
+        <p>{{$ctrl.selectedAlbum.collectionPrice}}: 
+            <audio ng-src="{{$ctrl.trustedUrl}}" type="audio/mp4" controls></audio>
         </p>
         
     </div>
