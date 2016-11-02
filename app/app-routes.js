@@ -3,22 +3,26 @@ angular.module('ng-music')
 
         $sceProvider.enabled(false);
 
+        //You should only need two states
+        //One for showing all of the albums
+        //and another for each album that renders
+        //more details about that one album
+        //including an option to play the songs
+        //for that paticular album
+
+        //You will need to utilize a route parameter to pass
+        //the album id to the album component
+
+        //The next state needs to be named *** album ***
+
         $stateProvider
-            .state({
-                name: 'home',
-                url: '',
-                template: 'home'
-            })
             .state({
                 name: 'albums',
                 url: '/albums',
-                template: '<albums></albums>',
+                template: 'Maybe you should render your albums component here',
             })
-            .state({
-                name: 'album',
-                url: '/albums/:id',
-                template: '<album><album>'
-            })
+
+
 
             $urlRouterProvider.otherwise('/albums')
     })
