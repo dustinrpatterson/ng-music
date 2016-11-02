@@ -10,6 +10,9 @@ angular.module('ng-music')
             //You should return the album by its id
         }
 
+        // Once you finish these two functions head over to app-routes and make sure your albums state is rendering the <albums> component
+
+
         var albums = [{
             "collectionId": 211192863,
             "artistName": "Various Artists",

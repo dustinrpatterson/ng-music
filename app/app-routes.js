@@ -13,16 +13,22 @@ angular.module('ng-music')
         //You will need to utilize a route parameter to pass
         //the album id to the album component
 
-        //The next state needs to be named *** album ***
 
         $stateProvider
             .state({
                 name: 'albums',
                 url: '/albums',
-                template: 'Maybe you should render your albums component here',
+                template: 'Maybe you should render your albums component here', //Get the right component here and go look at your page
             })
 
+            //You will notice the more dets button is broken look at your dev tools. Now its time to add that next state
+            //The next state needs to be named *** album ***
+            //It will need to be setup to accept a route parameter. 
+            //This is just like it was in node/express routing 
+            //but its not optional so no ? needed
 
+            //Once you get your album state done you will need to fix the AlbumController 
 
             $urlRouterProvider.otherwise('/albums')
+            //^^^ this guy defaults the page to albums if a bad url is given
     })

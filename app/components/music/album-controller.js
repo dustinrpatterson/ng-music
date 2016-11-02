@@ -9,5 +9,8 @@
 
     function AlbumController($stateParams, MusicService) {
         // you will need to utilize the $stateParams and MusicService to get the correct album by its id
+        //Be sure to get the desired album on some property that you can use in the view
+
+        //Once you get the basics built out can you modify the MusicService to use the Itunes API???
     }
 } ())
