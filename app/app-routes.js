@@ -18,7 +18,12 @@ angular.module('ng-music')
             .state({
                 name: 'albums',
                 url: '/albums',
-                template: 'Maybe you should render your albums component here', //Get the right component here and go look at your page
+                template: '<albums></albums>', //Get the right component here and go look at your page
+            })
+            .state({
+                name: 'album',
+                url: '/album/:id',
+                template: '<album></album>'
             })
 
             //You will notice the more dets button is broken look at your dev tools. Now its time to add that next state
@@ -32,3 +37,4 @@ angular.module('ng-music')
             $urlRouterProvider.otherwise('/albums')
             //^^^ this guy defaults the page to albums if a bad url is given
     })
+    

@@ -1,8 +1,13 @@
 <div class="album-details">
 	<div class="jumbotron">
-		<h1>YOUR ALBUM SHOULD SHOW UP HERE</h1>
-		<ul>
-			<li>You may want to show all of the tracks in a paticular ALBUM here</li>
+		<h1>{{$ctrl.songs.collectionName}}</h1>
+		<ul ng-repeat="tracks in $ctrl.songs.tracks">
+			<li ng-show="tracks.trackName">{{tracks.trackName}}</li>
 		</ul>
 	<div>
 </div>
+
+    
+
+
+
